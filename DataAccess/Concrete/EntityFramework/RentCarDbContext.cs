@@ -17,5 +17,17 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Color> Colors { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        //Custom mapping entity olan car ı veri tabanındaki arac tablosuna bağlama
+        //public DbSet<Car> Arac { get; set; }
+
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{   //fluent mapping 
+        //    //modelBuilder.HasDefaultSchema("admin");
+        //    modelBuilder.Entity<Car>().ToTable("Cars");
+        //    modelBuilder.Entity<Car>().Property(p => p.CarId).HasColumnName("CarID");
+        //    modelBuilder.Entity<Car>().Property(p => p.CarName).HasColumnName("AracName");
+        //}
     }
 }
